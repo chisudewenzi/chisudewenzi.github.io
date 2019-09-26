@@ -1,10 +1,19 @@
 <html>
+ 
 <body>
-<h1>我叫董斌.</h1>
-    <p>我的学号是<span id="studentnumber">18002090110</span>
+<h1>我叫<span id="myid"></span>.</h1>
+    <p>我的学号是<span id="mynumber"></span>
         <img src="matrix.png">.
-        <img id="logo" src="111.jpg">
+        <img id="logo" src="111.jpg" style="border-radius: 10px 20px 30px 40px">
     </p>
-
+<script src="jquery-3.4.1.js"></script>
+<script>
+$(function(){
+    $.get("./Untitled-1.json",function(result){
+        $("myname").text(result.myname);
+        $("#mynumber").text(result.mynumber);
+    });
+})
+</script>
 </body>
 </html>
